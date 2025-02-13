@@ -8,11 +8,11 @@ app = Flask(__name__)
 CORS(app)
 app.config.from_object(Config)
 
-db.init_app(app)
+# db.init_app(app)
 
-# Correct way to register routes
-app.add_url_rule('/register', view_func=routes.register_user, methods=['POST'])
-app.add_url_rule('/login', view_func=routes.login_user, methods=['POST'])
+# # Correct way to register routes
+# app.add_url_rule('/register', view_func=routes.register_user, methods=['POST'])
+# app.add_url_rule('/login', view_func=routes.login_user, methods=['POST'])
 app.add_url_rule('/analyze', view_func=routes.analyze_embryo, methods=['POST'])
 
 @app.route('/')
