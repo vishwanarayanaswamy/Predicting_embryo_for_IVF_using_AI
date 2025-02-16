@@ -3,6 +3,8 @@ from flask_cors import CORS
 from config import Config
 import routes  # Import entire routes module, not individual functions
 
+import os
+
 app = Flask(__name__)
 CORS(app)
 app.config.from_object(Config)
@@ -18,7 +20,6 @@ app.add_url_rule('/analyze', view_func=routes.analyze_embryo, methods=['POST'])
 def home():
     return "Hello, Vishwa! Welcome to the IVF Embryo Analyzer API."
 
-import os
 
 if __name__ == "__main__":
     port = int(os.getenv("PORT", 5000))  # Get port from environment or default to 5000
