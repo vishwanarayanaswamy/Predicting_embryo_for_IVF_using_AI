@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_cors import CORS
-from models import db
+#from models import db
 from config import Config
 import routes  # Import entire routes module, not individual functions
 
