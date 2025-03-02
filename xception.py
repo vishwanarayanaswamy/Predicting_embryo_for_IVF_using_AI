@@ -24,7 +24,7 @@ def create_xception_model():
     
     return model
 
-if __name__ == "__main__":
+if _name_ == "_main_":
     model = create_xception_model()
     model.save("xception_model.h5")
     print("Model saved as xception_model.h5")
