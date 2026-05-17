@@ -10,7 +10,7 @@ CORS(app)
 # ✅ Drop all tables and recreate them
 with app.app_context():
     try:
-        print("⚠️ Dropping all existing tables...")
+        ("⚠️ Dropping all existing tables...")
         db.drop_all()  # Deletes all tables
         print("✅ Creating new tables...")
         db.create_all()  # Creates fresh tables based on models
